@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume Evaluation Quiz</title>
+<script>
+function submitForm() {
+    alert('Submitted successfully!');
+    return false; // Prevent the form from actually submitting
+}
+</script>
+</head>
+<body>
+
+<h2>Python, Java, Machine Learning, and Data Science Quiz</h2>
+
+<form action="/evaluate" method="post" onsubmit="return submitForm();">
+    
+    <!-- Python Questions -->
+    <h3>Python Questions:</h3>
+    <h4>1. What is Python primarily used for?</h4>
+    <input type="radio" name="q1" value="a"> Web Development<br>
+    <input type="radio" name="q1" value="b"> Data Analysis<br>
+    <input type="radio" name="q1" value="c"> Both a and b<br>
+    
+    <h4>2. Which of the following is a correct way to comment in Python?</h4>
+    <input type="radio" name="q2" value="a"> // Single line comment<br>
+    <input type="radio" name="q2" value="b"> /* Single line comment */<br>
+    <input type="radio" name="q2" value="c"> # Single line comment<br>
+    
+    <!-- Java Questions -->
+    <h3>Java Questions:</h3>
+    <h4>3. Which keyword is used to define a class in Java?</h4>
+    <input type="radio" name="q3" value="a"> class<br>
+    <input type="radio" name="q3" value="b"> Class<br>
+    <input type="radio" name="q3" value="c"> ClassOf<br>
+    
+    <h4>4. What is the correct way to declare an interface in Java?</h4>
+    <input type="radio" name="q4" value="a"> interface MyInterface<br>
+    <input type="radio" name="q4" value="b"> Interface MyInterface<br>
+    <input type="radio" name="q4" value="c"> interface: MyInterface<br>
+    
+    <!-- Machine Learning Questions -->
+    <h3>Machine Learning Questions:</h3>
+    <h4>5. Which of the following is a supervised learning algorithm?</h4>
+    <input type="radio" name="q5" value="a"> K-Means Clustering<br>
+    <input type="radio" name="q5" value="b"> Linear Regression<br>
+    <input type="radio" name="q5" value="c"> Principal Component Analysis<br>
+    
+    <h4>6. What does the 'train-test-split' function do in machine learning?</h4>
+    <input type="radio" name="q6" value="a"> Divides the dataset into two equal parts<br>
+    <input type="radio" name="q6" value="b"> Splits the dataset into training and test sets<br>
+    <input type="radio" name="q6" value="c"> Randomly shuffles the dataset<br>
+    
+    <!-- Data Science Questions -->
+    <h3>Data Science Questions:</h3>
+    <h4>7. Which of the following is NOT a primary step in the data science lifecycle?</h4>
+    <input type="radio" name="q7" value="a"> Data Collection<br>
+    <input type="radio" name="q7" value="b"> Data Analysis<br>
+    <input type="radio" name="q7" value="c"> Data Visualization<br>
+    
+    <h4>8. What is the purpose of normalization in data preprocessing?</h4>
+    <input type="radio" name="q8" value="a"> To convert categorical data into numerical data<br>
+    <input type="radio" name="q8" value="b"> To scale features to a standard range<br>
+    <input type="radio" name="q8" value="c"> To handle missing values<br>
+    
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

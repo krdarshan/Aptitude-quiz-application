@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Human Cyber Security Quiz</title>
+</head>
+<body>
+
+<h2>Human Cyber Security Quiz</h2>
+
+<form id="quizForm">
+
+    <!-- Human Cyber Security Questions -->
+    <div class="question">
+        <p>1. What is the primary purpose of multi-factor authentication (MFA)?</p>
+        <input type="radio" name="q1" value="A"> To provide multiple user names.<br>
+        <input type="radio" name="q1" value="B"> To ensure secure access using multiple credentials.<br>
+    </div>
+
+    <div class="question">
+        <p>2. Phishing attacks primarily aim to:</p>
+        <input type="radio" name="q2" value="A"> Gain unauthorized access to systems.<br>
+        <input type="radio" name="q2" value="B"> Distribute software viruses.<br>
+    </div>
+
+    <div class="question">
+        <p>3. What is the danger of using public Wi-Fi networks without proper security measures?</p>
+        <input type="radio" name="q3" value="A"> Exposure to man-in-the-middle attacks.<br>
+        <input type="radio" name="q3" value="B"> Faster internet speed.<br>
+    </div>
+
+    <div class="question">
+        <p>4. What is the best practice for creating secure passwords?</p>
+        <input type="radio" name="q4" value="A"> Use a combination of letters, numbers, and special characters.<br>
+        <input type="radio" name="q4" value="B"> Use the same password for all accounts.<br>
+    </div>
+
+    <div class="question">
+        <p>5. Social engineering attacks exploit:</p>
+        <input type="radio" name="q5" value="A"> Technical vulnerabilities in software.<br>
+        <input type="radio" name="q5" value="B"> Human psychology and behavior.<br>
+    </div>
+
+    <div class="question">
+        <p>6. What is the primary purpose of regular software updates?</p>
+        <input type="radio" name="q6" value="A"> Introducing new features.<br>
+        <input type="radio" name="q6" value="B"> Patching security vulnerabilities.<br>
+    </div>
+
+    <div class="question">
+        <p>7. What should you do if you receive a suspicious email?</p>
+        <input type="radio" name="q7" value="A"> Click on any links to investigate.<br>
+        <input type="radio" name="q7" value="B"> Delete the email and report it.<br>
+    </div>
+
+    <div class="question">
+        <p>8. What does VPN stand for?</p>
+        <input type="radio" name="q8" value="A"> Virtual Private Network.<br>
+        <input type="radio" name="q8" value="B"> Very Private Name.<br>
+    </div>
+
+    <div class="question">
+        <p>9. Why is it essential to lock your computer when stepping away from it?</p>
+        <input type="radio" name="q9" value="A"> To conserve energy.<br>
+        <input type="radio" name="q9" value="B"> To prevent unauthorized access to sensitive data.<br>
+    </div>
+
+    <div class="question">
+        <p>10. Two-factor authentication (2FA) typically involves:</p>
+        <input type="radio" name="q10" value="A"> A password and a username.<br>
+        <input type="radio" name="q10" value="B"> Something you know and something you have (e.g., a phone).<br>
+    </div>
+
+</form>
+
+<button onclick="submitQuiz()">Submit Answers</button>
+
+<p id="result"></p>
+
+<script>
+function submitQuiz() {
+    let correctAnswers = 0;
+
+    // Correct Answers for Human Cyber Security Questions
+    const correctChoices = ["B", "A", "A", "A", "B", "B", "B", "A", "B", "B"];
+
+    for (let i = 1; i <= 10; i++) {
+        const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selectedOption && selectedOption.value === correctChoices[i - 1]) {
+            correctAnswers++;
+        }
+    }
+
+    const totalQuestions = 10;
+    const percentage = (correctAnswers / totalQuestions) * 100;
+
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `You scored ${correctAnswers}/${totalQuestions}. Your percentage is ${percentage}%.`;
+
+    if (percentage >= 70) {
+        resultElement.innerHTML += " Congratulations! You have passed.";
+    } else {
+        resultElement.innerHTML += " Sorry, you did not pass the assessment.";
+    }
+}
+</script>
+
+</body>
+</html>
